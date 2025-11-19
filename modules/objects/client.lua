@@ -73,6 +73,7 @@ local function createObject(self)
 
     FreezeEntityPosition(obj, self.freeze)
     SetCanClimbOnEntity(obj, self.canClimb)
+    SetEntityCanBeDamaged(obj, not self.invincible)
 
     if type(self.colissions) == 'boolean' then
         SetEntityCollision(obj, self.colissions, self.colissions)
